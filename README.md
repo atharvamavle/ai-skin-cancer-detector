@@ -1,295 +1,212 @@
 # DermaGuard AI
 
-AI-powered skin cancer risk assessment web application for early awareness, accessibility, and faster guidance.
+DermaGuard AI is a full-stack skin lesion analysis project that combines a React frontend, a FastAPI backend, and deep learning models to support early skin cancer risk awareness. The repository is organized into separate app, API, and model modules on the `main` branch.
 
 ## Demo Video
-Add your demo video link here after upload:
+Add your project demo link after upload:
 
-- Demo Video: [Watch the project demo](PASTE_YOUR_VIDEO_LINK_HERE)
+- Demo Video: [Watch the demo](PASTE_YOUR_VIDEO_LINK_HERE)
 
-## Project Overview
-DermaGuard AI is a full-stack medical AI project built to make early skin cancer risk awareness more accessible to everyone. The idea behind the project is simple: many people ignore suspicious skin changes because dermatologist consultations can be expensive, delayed, or hard to access. This project gives users a fast first-level AI-based skin lesion risk assessment using an uploaded image, followed by a report and guidance to seek medical help when necessary.
+## Live Repository
+- GitHub: https://github.com/atharvamavle/ai-skin-cancer-detector
+- Branch: `main`
 
-This project was created with the goal of supporting **early awareness**, not replacing doctors. It helps users take the first step sooner, especially in cases where cost, distance, or delay might stop them from getting checked.
+## Project Purpose
+DermaGuard AI was built to improve accessibility to early skin cancer awareness. Many people delay skin checks because consultations can be expensive, time-consuming, or difficult to access. This project provides a quick AI-assisted first-level screening workflow so users can act earlier and seek proper medical attention sooner.
 
-## Problem It Solves
-Skin cancer is one of the most serious and common health concerns, especially in countries like Australia where UV exposure is high. Many people do not act early because:
+This system is designed as a support tool for awareness and education. It is not a replacement for clinical diagnosis.
 
-- Skin checks can cost money.
-- Specialist appointments may take time.
-- People often ignore warning signs until the condition gets worse.
-- There is limited immediate access to basic risk screening tools for everyone.
+## Problem Being Solved
+Skin cancer can become dangerous when warning signs are ignored. In many cases, people delay action because:
 
-DermaGuard AI addresses this gap by providing:
+- Initial consultations may be costly.
+- Access to specialists may be limited.
+- People may not know whether a lesion looks serious.
+- There are not enough simple and accessible screening-style tools for quick first-step guidance.
 
-- A simple image-based risk screening workflow.
-- Faster awareness about suspicious lesions.
-- Easy access through a web application.
-- A downloadable report for reference.
-- Nearby hospital or clinic discovery support.
+DermaGuard AI addresses this by offering:
+
+- Image upload and AI-based lesion analysis.
+- Fast prediction output for awareness.
+- A report generation workflow.
+- Nearby hospital or clinic guidance.
+- A usable full-stack product structure instead of only a notebook model.
 
 ## What I Built
-This project is a complete end-to-end AI application with both frontend and backend components.
-
-### Core Features
-- Upload a skin lesion image through the web interface.
-- Run AI-based classification on the uploaded image.
-- Display prediction results and confidence insights.
-- Generate a PDF report for the user.
-- Help users find nearby hospitals or clinics.
-- Deliver the system through a clean full-stack workflow.
-
-### Full-Stack Architecture
-- **Frontend:** React
-- **Backend:** FastAPI
-- **Model Inference:** PyTorch
-- **Model Used:** EfficientNet-B4
-- **Location Support:** Google Places API
-- **Report Generation:** PDF generation pipeline
-
-## Models Used
-Based on your project details, DermaGuard AI uses PyTorch-based models, with EfficientNet-B4 being the main model highlighted for the skin cancer detection workflow.
-
-### Main Model
-- **EfficientNet-B4** for image-based skin lesion classification.
-
-### Why EfficientNet-B4
-EfficientNet-B4 is a strong choice for medical image classification because it balances accuracy and efficiency well. It is capable of learning rich image features while still being practical for deployment in an application workflow.
-
-### Model Role in the Project
-The model analyzes the uploaded skin image and predicts lesion-related risk categories. That prediction is then used to provide a user-facing output that supports awareness and encourages further clinical consultation if needed.
-
-### Additional Note
-You also mentioned that your broader project setup includes two PyTorch models: one for the medical AI component and another thinner model for the skin guardian API layer. If your repository exposes both clearly, include that detail in the final public documentation.
-
-## How the Project Works
-The workflow is designed to be simple for a normal user.
-
-1. The user opens the DermaGuard AI web application.
-2. The user uploads a skin lesion image.
-3. The backend receives the file through FastAPI.
-4. The model preprocesses the image and runs inference.
-5. The application returns prediction results.
-6. A PDF report can be generated.
-7. The user can also view nearby hospitals or clinics for next steps.
-
-## Why This Project Matters
-This project has both technical and social value.
-
-### User Impact
-- Makes first-level screening awareness more accessible.
-- Encourages earlier action instead of delay.
-- Reduces dependence on immediate expensive initial screening.
-- Can help people take suspicious symptoms seriously sooner.
-
-### Technical Impact
-- Shows how AI can be integrated into a real healthcare support workflow.
-- Demonstrates full-stack AI deployment skills.
-- Combines computer vision, backend APIs, frontend development, and external APIs in one project.
-- Creates a portfolio-ready real-world AI system.
-
-## What I Did in This Project
-This section explains your actual contribution clearly.
-
-- Designed and built the full project architecture.
-- Developed the frontend interface for image upload and result display.
-- Built the FastAPI backend for inference and API handling.
-- Integrated the PyTorch model into the prediction pipeline.
-- Used EfficientNet-B4 for skin lesion classification.
-- Added PDF report generation.
-- Integrated hospital discovery support using Google Places API.
-- Positioned the project around real-world accessibility and early detection.
-- Created a demo video to present the working system.
-
-## Repository
-Your GitHub repository for this project is:
-
-- GitHub Repo: https://github.com/atharvamavle/ai-skin-cancer-detector.git
-
-### Branch
-Use your actual working branch for the public project. If you have not created a separate feature branch, your main public branch is most likely:
-
-- `main`
-
-If your final code is on another branch, replace this in the README with the exact branch name.
-
-## Project Structure
-Example structure for your repository:
+This project is split into multiple parts inside one repository:
 
 ```bash
 ai-skin-cancer-detector/
-├── backend/
-├── frontend/
-├── models/
-├── reports/
-├── assets/
-├── README.md
-├── requirements.txt
-├── package.json
-└── .env.example
+├── .vscode/
+├── skin-guardian-ai/
+├── skin-guardian-api/
+├── skin-guardian-model/
+├── .gitignore
+└── README.md
 ```
 
-Adjust the structure above to match your actual repository.
+### Repository Modules
+- `skin-guardian-ai/` — frontend application for user interaction.
+- `skin-guardian-api/` — FastAPI backend for inference and application logic.
+- `skin-guardian-model/` — model-related code, experiments, or training assets.
 
-## Installation and Setup
-These steps help another person run the project.
+This structure shows the project was developed as a proper modular system rather than a single script.
 
-### Prerequisites
-A user should have:
+## Tech Stack
+### Frontend
+- React
+- TypeScript
+- CSS
 
-- Python installed
-- Node.js and npm installed
-- Git installed
-- A Google Places API key if location features are enabled
-- Required model weights or checkpoint files
-- Environment variable configuration
+### Backend
+- FastAPI
+- Python
+- PyTorch
 
-### Backend Setup
+### AI/ML
+- EfficientNet-B4 is described in the repository README as the main model used for skin lesion classification.
+- The repository description also presents the project as a computer vision web app for classifying skin lesions such as Melanoma, BCC, and SCC.
+
+### External Support
+- Google Places API for nearby hospital or clinic suggestions.
+- PDF generation pipeline for downloadable output.
+
+## What the Model Does
+The model takes an uploaded skin lesion image, preprocesses it, runs inference, and returns a prediction to the user-facing application. The goal is to provide faster awareness so that suspicious lesions are not ignored.
+
+Based on the repository description and existing README, the project focuses on skin lesion classification and awareness for categories including Melanoma, BCC, and SCC.
+
+## How the Project Works
+1. A user opens the frontend web app.
+2. The user uploads an image of a skin lesion.
+3. The frontend sends the image to the FastAPI backend.
+4. The backend preprocesses the image and runs model inference.
+5. The model returns a classification-related output.
+6. The application displays the result to the user.
+7. A report can be generated.
+8. The app can guide the user toward nearby hospitals or clinics.
+
+## My Contribution
+This project demonstrates end-to-end AI product development. Your contribution can be presented clearly as:
+
+- Built the full-stack architecture across frontend, backend, and model modules.
+- Developed a React-based interface for image upload and result display.
+- Built a FastAPI backend for handling model inference.
+- Integrated deep learning inference into an application workflow.
+- Designed the project around real-world healthcare accessibility.
+- Added reporting and guidance-oriented features.
+- Created a project demo video for presentation and portfolio use.
+
+## Why This Project Matters
+### Real-World Value
+- Encourages people to act earlier on suspicious skin changes.
+- Improves accessibility of first-step awareness tools.
+- Reduces hesitation caused by uncertainty, delay, or cost.
+- Supports a socially relevant healthcare use case.
+
+### Portfolio Value
+- Demonstrates applied computer vision.
+- Shows full-stack AI deployment ability.
+- Connects model inference with user-facing product design.
+- Highlights product thinking, social impact, and engineering execution together.
+
+## How Someone Else Can Use It
+### For Users
+- Open the application.
+- Upload a clear skin lesion image.
+- Wait for the analysis result.
+- Review the prediction output.
+- Download the report if available.
+- Use nearby clinic or hospital support for next steps.
+
+### For Developers
+1. Clone the repository:
 ```bash
 git clone https://github.com/atharvamavle/ai-skin-cancer-detector.git
 cd ai-skin-cancer-detector
-
-# create virtual environment
-python -m venv venv
-
-# activate environment
-# Windows:
-venv\Scripts\activate
-# Mac/Linux:
-source venv/bin/activate
-
-# install backend dependencies
-pip install -r requirements.txt
 ```
 
-### Frontend Setup
+2. Set up the backend dependencies inside the API project.
+3. Set up the frontend dependencies inside the frontend project.
+4. Add environment variables such as API keys and model paths.
+5. Start the backend server.
+6. Start the frontend development server.
+7. Connect model weights and test the upload pipeline.
+
+## Suggested Setup Flow
+Because this repository is modular, a contributor should typically work module by module.
+
+### Backend
 ```bash
-# move to frontend directory if separate
-cd frontend
+cd skin-guardian-api
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+uvicorn app:app --reload
+```
+
+### Frontend
+```bash
+cd skin-guardian-ai
 npm install
 npm run dev
 ```
 
-### Run Backend
-```bash
-# from backend directory or project root, depending on your structure
-uvicorn app:app --reload
-```
+If your actual entrypoint or script names differ, replace them with the exact commands used in your codebase.
 
-### Environment Variables
-Create a `.env` file and add values such as:
+## Required Configuration
+Someone using this project will usually need:
 
-```env
-GOOGLE_PLACES_API_KEY=your_key_here
-MODEL_PATH=path_to_model_weights
-```
+- Python
+- Node.js and npm
+- Git
+- Model weights/checkpoints
+- Environment variables
+- API key configuration for location features if enabled
 
-Use a `.env.example` file in the repository so other users know what is needed without exposing secrets.
+A `.env.example` file is recommended for public use.
 
-## How Someone Can Use It
-This project is designed for simple usage.
+## How It Helps Users
+DermaGuard AI helps by:
 
-### For End Users
-- Open the web application.
-- Upload a clear image of the skin lesion.
-- Wait for the AI result.
-- Review the output and confidence information.
-- Download the report if needed.
-- Use the nearby hospital suggestion feature for medical follow-up.
+- Giving quicker first-step awareness.
+- Encouraging early action instead of delay.
+- Providing a practical AI-assisted workflow.
+- Making health-support technology more accessible.
+- Demonstrating how AI can support preventive healthcare experiences.
 
-### For Developers
-- Clone the repository.
-- Install frontend and backend dependencies.
-- Add the required environment variables.
-- Add the trained model weights.
-- Start backend and frontend servers.
-- Test the upload and prediction pipeline.
-
-## Important Medical Disclaimer
-DermaGuard AI is not a replacement for a licensed dermatologist or medical professional. It is an awareness and support tool for early screening guidance only. Any suspicious lesion or high-risk result should always be reviewed by a qualified healthcare provider.
-
-## How It Helps
-DermaGuard AI helps in several practical ways:
-
-- Increases awareness of possible skin cancer risk.
-- Encourages early action.
-- Makes initial guidance more accessible.
-- Supports users who may delay visits because of cost or uncertainty.
-- Demonstrates how AI can support healthcare accessibility.
-
-## Future Improvements
-There are many ways this project can be improved further.
-
+## Improvements for the Future
 ### Model Improvements
 - Train on larger and more diverse dermatology datasets.
-- Improve class balance and robustness.
-- Add explainability methods such as Grad-CAM.
-- Evaluate with stronger medical validation metrics.
-- Add uncertainty estimation for safer predictions.
+- Add explainability such as Grad-CAM.
+- Improve calibration and uncertainty estimation.
+- Report medical validation metrics more clearly.
 
 ### Product Improvements
-- Add user authentication and secure report history.
+- Add authentication and saved report history.
+- Improve mobile responsiveness.
 - Add multilingual support.
-- Add mobile-first optimization.
-- Add telehealth or doctor referral integration.
-- Improve hospital and clinic recommendations.
-- Add cloud deployment for wider public access.
+- Add telehealth or dermatologist referral workflows.
+- Deploy a stable cloud-hosted version.
 
 ### Engineering Improvements
-- Containerize with Docker.
-- Add CI/CD pipelines.
-- Add automated testing for backend and frontend.
-- Improve model serving performance.
-- Add logging, monitoring, and analytics.
+- Add Docker support.
+- Add CI/CD.
+- Add automated testing.
+- Improve monitoring and error logging.
+- Add better project documentation for each submodule.
 
-## Suggested README Video Section
-You said you created a demo video for this project. Add a section like this in GitHub:
+## Medical Disclaimer
+This project is a research and awareness tool only. It is not a replacement for a licensed doctor or dermatologist. Any suspicious lesion or concerning result should always be reviewed by a qualified healthcare professional.
 
-```md
-## Demo Video
-Watch the working demo here: [Project Demo](PASTE_YOUR_VIDEO_LINK_HERE)
-```
+## Notes for GitHub README
+Before final publishing, update these items:
 
-If you upload the demo to YouTube, Loom, Google Drive, or LinkedIn, replace the placeholder with the real URL.
+- Add your real demo video link.
+- Add screenshots or GIFs.
+- Confirm exact setup commands in each submodule.
+- Confirm exact environment variables.
+- Add performance metrics if available.
+- Add deployment link if available.
 
-## Best Use Cases
-This project can be useful for:
-
-- AI/ML portfolio showcasing.
-- Healthcare AI demonstrations.
-- Early screening awareness prototypes.
-- Academic capstone presentations.
-- Startup prototype validation.
-
-## What Makes This Project Strong
-- Solves a real-world healthcare accessibility problem.
-- Combines AI with practical product thinking.
-- Uses a full-stack architecture instead of only model training.
-- Shows social impact and technical depth together.
-- Has clear potential for future scaling and refinement.
-
-## For Recruiters and Reviewers
-This project demonstrates:
-
-- Applied computer vision skills.
-- PyTorch model integration.
-- FastAPI backend development.
-- React frontend development.
-- API integration skills.
-- Product-oriented AI thinking.
-- Real-world healthcare problem solving.
-
-## Final Notes
-Before publishing this README publicly, update these items:
-
-- Add your live demo link if available.
-- Add your demo video link.
-- Confirm the exact branch name.
-- Confirm the exact file structure.
-- Confirm the exact FastAPI entrypoint (`app:app` or another module path).
-- Add screenshots if available.
-- Add model performance metrics if you want stronger technical credibility.
-
----
-
-Built by Atharva Santosh Mavale as an applied AI project focused on accessible early skin cancer risk awareness.
+Built by Atharva Santosh Mavale as an applied healthcare AI project focused on accessible skin cancer risk awareness.
