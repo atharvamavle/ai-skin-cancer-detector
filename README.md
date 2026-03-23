@@ -2,15 +2,6 @@
 
 DermaGuard AI is a full-stack skin lesion analysis project that combines a React frontend, a FastAPI backend, and deep learning models to support early skin cancer risk awareness. The repository is organized into separate app, API, and model modules on the `main` branch.
 
-## Demo Video
-Add your project demo link after upload:
-
-- Demo Video: [Watch the demo](PASTE_YOUR_VIDEO_LINK_HERE)
-
-## Live Repository
-- GitHub: https://github.com/atharvamavle/ai-skin-cancer-detector
-- Branch: `main`
-
 ## Project Purpose
 DermaGuard AI was built to improve accessibility to early skin cancer awareness. Many people delay skin checks because consultations can be expensive, time-consuming, or difficult to access. This project provides a quick AI-assisted first-level screening workflow so users can act earlier and seek proper medical attention sooner.
 
