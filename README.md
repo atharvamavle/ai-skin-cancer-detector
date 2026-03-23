@@ -198,15 +198,4 @@ DermaGuard AI helps by:
 
 ## Medical Disclaimer
 This project is a research and awareness tool only. It is not a replacement for a licensed doctor or dermatologist. Any suspicious lesion or concerning result should always be reviewed by a qualified healthcare professional.
-
-## Notes for GitHub README
-Before final publishing, update these items:
-
-- Add your real demo video link.
-- Add screenshots or GIFs.
-- Confirm exact setup commands in each submodule.
-- Confirm exact environment variables.
-- Add performance metrics if available.
-- Add deployment link if available.
-
-Built by Atharva Santosh Mavale as an applied healthcare AI project focused on accessible skin cancer risk awareness.
+ed on accessible skin cancer risk awareness.
